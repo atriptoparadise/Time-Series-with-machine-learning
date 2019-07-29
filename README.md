@@ -1,9 +1,11 @@
 # Time-Series-with-machine-learning
 
-https://medium.com/@qs2178/time-series-forecasting-with-stacked-machine-learning-models-7250abdece0f
+See more from here: https://medium.com/@qs2178/time-series-forecasting-with-stacked-machine-learning-models-7250abdece0f
 
 
-Welcome! I recently finished a project about time series forecasting and I figured it’s time to summarize my work for myself and sharing my thoughts with anyone needs it. As a brief introduction, I am a data scientist at a company selling products for animals.
+Welcome! 
+
+I recently finished a project about time series forecasting and I figured it’s time to summarize my work for myself and sharing my thoughts with anyone needs it. As a brief introduction, I am a data scientist at a company selling products for animals.
 Let’s start with some questions that I spent some time to figure out and I think it’s also important to know before you go deeper into it.
 
 1. Why need it?
@@ -28,9 +30,9 @@ For decreasing the variance and better prediction performance, I decided to stac
 
 4. What’s the metric?
 
-Mean Absolute Percentage Error: is a measure of prediction accuracy of a forecasting method in statistics. It expresses accuracy as a percentage, and is similar with MAE but is computed as a percentage, which is very convenient when you want to explain the quality of the model to management, $[0, +\infty)$
+Mean Absolute Percentage Error: is a measure of prediction accuracy of a forecasting method in statistics. It expresses accuracy as a percentage, and is similar with MAE but is computed as a percentage, which is very convenient when you want to explain the quality of the model to management, [0,+∞)
 
-$MAPE = \frac{100}{n}\sum\limits_{i=1}^{n} \frac{|y_i - \hat{y}_i|}{y_i}$ 
+![Image description](https://miro.medium.com/max/186/1*Ijk7yK-4f1qfnOQGdVV8iQ.png)
 
 5. How to do the cross-validation?
 
@@ -38,16 +40,19 @@ As time-series has a different structure compared with normal machine learning d
 
 I used a more tricky approach in optimizing the model parameters which can be found here. The idea is rather simple — we start with a small subset of data for training purpose, forecast for the later data points and then checking the accuracy for the forecasted data points. The same forecasted data points are then included as part of the next training dataset and subsequent data points are forecasted. The process will be like this:
 
+![Image description](https://miro.medium.com/max/631/1*6ujHlGolRTGvspeUDRe1EA.png)
+
 6. What’s the original data table? What’s the final input in your model? How to do the feature engineering?
 Okay, I will just walk through the whole process for this project from this question.
 
-In summary,
-- Getting data from database
-- EDA & Data Preprocessing based on business need
-- Feature engineering, created 48 months lag features and others
-- Modeling for each model after split; hyper-parameter tuning for tree-based models
-- Measure models performance by MAPE and stacked them into a new model
-- Using all data with the stacked model to do the final prediction
+- In summary,
+
+1. Getting data from database
+2. EDA & Data Preprocessing based on business need
+3. Feature engineering, created 48 months lag features and others
+4. Modeling for each model after split; hyper-parameter tuning for tree-based models
+5. Measure models performance by MAPE and stacked them into a new model
+6. Using all data with the stacked model to do the final prediction
 
 - Note: Due to confidential reason, I would not share any real data here. All code, results, and plots showing below are manipulated already.
 
