@@ -1,8 +1,10 @@
 # Time-Series-with-machine-learning
 
-See more from here: https://medium.com/@qs2178/time-series-forecasting-with-stacked-machine-learning-models-7250abdece0f
+See the post at **[Medium]**(https://medium.com/@qs2178/time-series-forecasting-with-stacked-machine-learning-models-7250abdece0f).
 
 
+
+---
 Welcome! 
 
 I recently finished a project about time series forecasting and I figured it’s time to summarize my work for myself and sharing my thoughts with anyone needs it. As a brief introduction, I am a data scientist at a company selling products for animals.
