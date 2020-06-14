@@ -1,6 +1,6 @@
 # Time-Series-with-machine-learning
 
-See the post at **[Medium]**(https://medium.com/@qs2178/time-series-forecasting-with-stacked-machine-learning-models-7250abdece0f).
+See the post at **[Medium](https://medium.com/@qs2178/time-series-forecasting-with-stacked-machine-learning-models-7250abdece0f)**.
 
 
 
